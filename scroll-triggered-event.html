@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #announcement {
+            position: fixed;
+            bottom: 10%;
+            right: 5%;
+            background: #fff3cd;
+            border: 2px solid #ffeeba;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            display: none;
+            z-index: 999;
+            transition: opacity 0.3s ease-in-out;
+        }
+        #announcement.show {
+            display: block;
+        }
+    
+    .scroll-box {
+        height: 1000px; /* Just for scrolling */
+        background-color: #d8edf5;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="scroll-box">
+        <p>Just for scrolling</p>
+    </div>
+    
+    <div id="announcement" class="hidden">
+        <h3>Don't Miss Our Ghibli Film Festival!</h3>
+        <p>Special screenings and exclusive merch this weekend!</p>
+      
+    </div>      
+
+      <script>
+        const announcementBox = document.getElementById("announcement");
+
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 600) {
+            announcementBox.classList.add("show");
+        } else {
+            announcementBox.classList.remove("show");
+        }
+        });
+
+      </script>
+
+</body>
+</html>
