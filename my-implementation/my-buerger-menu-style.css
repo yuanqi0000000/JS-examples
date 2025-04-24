@@ -9,12 +9,16 @@ height
 width
 */
 nav{
+    position: relative;
     display: flex;
     justify-content:center;
     align-items: center;
     background-color: aquamarine;
     height:60px;
     width:100%;
+    border: 2px solid rgb(255, 93, 45);
+    border-radius: 5px;
+
 }
 
 /*anchor的一般属性设置
@@ -59,7 +63,7 @@ a:hover{
    .nav-menu{
         display: flex;
         position:absolute;
-        top: 60px;
+        top: 100%;
         left: 0;
         right:0;
         flex-direction:column;
@@ -70,6 +74,8 @@ a:hover{
         visibility:hidden;
         overflow:hidden;
         transition:all 0.9s ease;
+        border:2px solid rgb(255, 93, 45); 
+        border-radius: 5px;
    }
 
    /* show的作用 */

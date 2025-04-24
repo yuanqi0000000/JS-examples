@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.parent {
+        position: relative; /* 关键：为子元素创建定位基准 */
+        width: 600px;
+        height: 200px;
+        background: #f0f0f0;
+      }
+      
+      .child {
+        position: absolute;
+        top: 10px;  /* 距离父容器顶部 10px */
+        right: 20px; /* 距离父容器右侧 20px */
+        width: 50px;
+        height: 50px;
+        background: red;
+      }
+      @media(max-width: 768px) {
+        .parent {
+          width:300px;
+      }
+      
+      
+      </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
